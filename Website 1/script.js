@@ -1,3 +1,12 @@
+// Smooth scroll to collection section
+        function scrollToCollection() {
+            const collectionSection = document.getElementById('collection-section');
+            collectionSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
 // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
