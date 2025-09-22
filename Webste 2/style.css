@@ -399,345 +399,239 @@
         }
 
         /* Features Section */
-        .features-section {
-            padding: 100px 60px;
+        .features {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
             text-align: center;
-        }
-
-        .section-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 20px;
-            padding: 8px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
-            color: white;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        .section-badge::before, .section-badge::after {
-            content: '';
-            width: 60px;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.3);
+            margin-bottom: 4rem;
         }
 
         .section-title {
-            font-size: 48px;
-            color: white;
-            margin-bottom: 80px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #a1a1aa;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
         }
 
-        .feature-box {
-            background: rgba(20, 27, 56, 0.6);
-            border: 1px solid rgba(74, 158, 255, 0.2);
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2.5rem;
             border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .feature-box:hover {
-            transform: translateY(-5px);
-            border-color: rgba(74, 158, 255, 0.5);
-            box-shadow: 0 20px 40px rgba(74, 158, 255, 0.2);
-        }
-
-        .feature-preview {
-            height: 300px;
-            background: linear-gradient(135deg, rgba(74, 158, 255, 0.05) 0%, rgba(123, 97, 255, 0.05) 100%);
-            border-radius: 10px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-label {
-            font-size: 28px;
-            color: white;
-            font-weight: 600;
-        }
-
-        /* Template Grid */
-        .template-grid {
-            padding: 100px 60px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .template-card {
-            background: rgba(20, 27, 56, 0.8);
-            border: 1px solid rgba(74, 158, 255, 0.2);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .template-card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(74, 158, 255, 0.3);
-            border-color: rgba(74, 158, 255, 0.5);
+            border-color: rgba(79, 172, 254, 0.3);
+            box-shadow: 0 25px 50px rgba(79, 172, 254, 0.1);
         }
 
-        .template-preview {
-            height: 250px;
-            background: linear-gradient(135deg, rgba(74, 158, 255, 0.1) 0%, rgba(123, 97, 255, 0.1) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .template-preview::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 30% 30%, rgba(74, 158, 255, 0.2) 0%, transparent 50%);
-        }
-
-        .template-info {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .template-name {
-            color: white;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        /* Figma Section */
-        .figma-section {
-            padding: 100px 60px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .figma-card {
-            background: rgba(20, 27, 56, 0.6);
-            border: 1px solid rgba(74, 158, 255, 0.2);
-            border-radius: 30px;
-            padding: 60px;
-            max-width: 1200px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            gap: 80px;
-            backdrop-filter: blur(10px);
-        }
-
-        .figma-content {
-            flex: 1;
-        }
-
-        .figma-icon {
+        .feature-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #f24e1e 0%, #ff7262 100%);
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 30px;
-            font-size: 30px;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
         }
 
-        .figma-title {
-            font-size: 42px;
-            color: white;
-            margin-bottom: 20px;
-            line-height: 1.2;
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
         }
 
-        .figma-text {
-            color: #a0a0b8;
-            font-size: 18px;
+        .feature-description {
+            color: #a1a1aa;
             line-height: 1.6;
-            margin-bottom: 40px;
         }
 
-        .figma-visual {
-            flex: 1;
-            height: 400px;
-            background: rgba(30, 37, 66, 0.4);
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
+        /* Pricing Section */
+        .pricing {
+            padding: 8rem 2rem;
+            background: rgba(255, 255, 255, 0.02);
         }
 
-        /* Variants Section */
-        .variants-section {
-            padding: 100px 60px;
-        }
-
-        .variants-content {
+        .pricing-container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 80px;
         }
 
-        .variants-text {
-            flex: 1;
-        }
-
-        .variants-title {
-            font-size: 48px;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .variants-description {
-            color: #a0a0b8;
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        .variants-visual {
-            flex: 1;
-            height: 500px;
-            background: rgba(20, 27, 56, 0.4);
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-            transform: perspective(1000px) rotateY(-5deg);
-        }
-
-        /* Footer CTA */
-        .footer-cta {
-            padding: 150px 60px;
-        }
-
-        .footer-cta-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 80px;
-        }
-
-        .template-showcase {
-            flex: 1;
-            height: 400px;
-            background: rgba(20, 27, 56, 0.4);
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
+        .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 10px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
         }
 
-        .showcase-item {
-            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-            border-radius: 8px;
-            opacity: 0.9;
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
         }
 
-        .footer-text {
-            flex: 1;
+        .pricing-card.featured {
+            border-color: rgba(79, 172, 254, 0.5);
+            transform: scale(1.05);
         }
 
-        .footer-title {
-            font-size: 48px;
-            color: white;
-            margin-bottom: 20px;
-            line-height: 1.2;
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(79, 172, 254, 0.1);
         }
 
-        .footer-description {
-            color: #a0a0b8;
-            font-size: 18px;
-            margin-bottom: 40px;
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4facfe;
+            margin-bottom: 1rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            color: #a1a1aa;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: #4facfe;
+            font-weight: bold;
+            margin-right: 0.5rem;
         }
 
         /* Footer */
         footer {
-            padding: 60px;
+            background: #0a0f1c;
+            padding: 4rem 2rem 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .footer-logo::before {
-            content: '';
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(135deg, #4a9eff 0%, #7b61ff 100%);
-            border-radius: 50%;
-        }
-
-        .footer-tagline {
-            color: #a0a0b8;
-            margin-bottom: 40px;
-        }
-
-        .footer-links {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
         }
 
-        .footer-links a {
-            color: #a0a0b8;
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #4facfe;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #a1a1aa;
             text-decoration: none;
-            transition: color 0.3s;
-            display: block;
-            padding: 5px 0;
+            transition: color 0.3s ease;
         }
 
-        .footer-links a:hover {
+        .footer-section ul li a:hover {
             color: white;
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: #a1a1aa;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 48px; }
-            .feature-card { width: 400px; height: 280px; }
-            .nav-links { display: none; }
-            nav { padding: 20px 30px; }
-            .cta-card, .figma-card { flex-direction: column; }
-            .grid-container { grid-template-columns: 1fr; }
-            .features-grid { grid-template-columns: 1fr; }
-            .footer-links { grid-template-columns: repeat(2, 1fr); }
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .dashboard-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Floating elements animation */
+        .floating-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
